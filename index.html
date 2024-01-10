@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container py-3 ">
+        <div class="title d-flex justify-content-around mb-3 pb-4">
+            <h1 class="p-2 ">Bookmarker</h1>
+        </div>
+        <div class="title my-3 py-3 text-center ">
+            <div class="d-flex justify-content-around mb-3">
+                <h4 class="fw-bold"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h4>
+            </div>
+            <form>
+                <div class="mb-3 text-start">
+                    <label for="BookmarkName"><i class="fa-solid fa-book-bookmark pe-2"> Site Name</i></label>
+                    <input type="text" id="BookmarkName" class="form-control mt-2" placeholder="Bookmark Name" />
+                </div>
+                <div class="mb-3 text-start">
+                    <label for="WebsiteURL"><i class="fa-solid fa-link pe-2"> Site URL</i></label>
+                    <input type="text" id="WebsiteURL" class="form-control mt-2" placeholder="Website URL" />
+                </div>
+                <p id="exist" class=" text-danger"></p>
+                <button type="button" onclick="addsite()" id="add"  class="btn my-3">Submit</button>
+            </form>
+        </div>
+        
+        <table class="table mt-4 text-center table-light">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit	 </th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="myData">
+            </tbody>
+        </table>
+    </div>
+    <div id="boxContainer" class=" flex-column" >
+        <div id="innerBox" class="innerBox  p-3 position-relative rounded-2">
+            <div class="dottes d-flex m-3">
+                <span class="dot1 rounded-circle me-2 bg-danger"></span>
+                <span class="dot1 rounded-circle me-2 bg-success "></span>
+                <span class="dot1 rounded-circle me-2 bg-warning"></span>
+            </div>
+            <i id="close" class="fa-solid m-3 fa-2x fa-xmark position-absolute top-0 end-0"></i>
+            <p class="m-3 fw-bold fs-5">Site Name or Url is not valid, Please follow the rules below :</p>
+            <p class="m-3"><i class="fa-regular text-danger fa-circle-right"></i> Site name must contain at least 3 characters</p>
+            <p class="m-3"><i class="fa-regular text-danger fa-circle-right"></i> Site URL must be a valid one</p>
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
